@@ -1,5 +1,7 @@
 import React from 'react'
-
+import { 
+    LinkContainer
+   } from 'react-router-bootstrap'
 import { Navbar, Container, Nav } from "react-bootstrap"
 
 function Navigation() {
@@ -8,8 +10,17 @@ function Navigation() {
         <Container>
         <Navbar.Brand href="/">Navbar</Navbar.Brand>
         <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <LinkContainer to="/register">
+                <Nav.Link>Browser</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/login">
+                <Nav.Link>Login</Nav.Link>
+            </LinkContainer>
+        </Nav>
+        <Nav>
+            <Nav.Link>
+                user
+            </Nav.Link>
         </Nav>
         </Container>
     </Navbar>
