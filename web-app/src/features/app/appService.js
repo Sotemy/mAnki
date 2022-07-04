@@ -2,8 +2,8 @@ import axios from "axios"
 
 const API_URL = '/api/'
 
-// register user
-const syncronizeData = async (data, token) => {
+
+const getData = async (token) => {
 
     const config = {
         headers: {
@@ -11,7 +11,8 @@ const syncronizeData = async (data, token) => {
         }
     }
 
-    const response = await axios.post(API_URL, data, config)
+    const response = await axios.get(API_URL, config)
+    console.log(response)
 
 
     if(!response.data){
@@ -21,6 +22,8 @@ const syncronizeData = async (data, token) => {
     return response
 }
 
+const appService = {
+    getData
+}
 
-
-export default syncronizeData;
+export default appService;

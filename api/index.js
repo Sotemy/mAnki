@@ -18,6 +18,6 @@ app.use('/api', require('./routes/appRoutes'))
 
 app.use(errorHandler)
 
-app.listen(5000, () => {
-  console.log(`Example app listening on port 5000`)
+app.listen(3001, () => {
+  console.log(`Example app listening on port 3001`)
 })

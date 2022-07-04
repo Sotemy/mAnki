@@ -10,12 +10,10 @@ function Navigation() {
         <Container>
         <Navbar.Brand href="/">Navbar</Navbar.Brand>
         <Nav className="me-auto">
-            <LinkContainer to="/register">
+            <LinkContainer to="/browser">
                 <Nav.Link>Browser</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/login">
-                <Nav.Link>Login</Nav.Link>
-            </LinkContainer>
+            
         </Nav>
         <Nav>
             <Nav.Link>
