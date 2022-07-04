@@ -1,0 +1,19 @@
+{
+  "name": "manki",
+  "version": "0.0.1",
+  "description": "mAnki - gain more knowlage easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sotemy/mAnki.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sotemy/mAnki/issues"
+  },
+  "homepage": "https://github.com/Sotemy/mAnki#readme"
+}

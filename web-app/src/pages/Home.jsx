@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ListGroup } from "react-bootstrap"
 
-import BottomBar from '../components/BottomBar'
+import BB from '../components/BB'
 import { getData } from "../features/app/appSlice"
 import Spinn from '../components/Spinn';
 import StackItem from '../components/StackItem';
@@ -52,7 +52,7 @@ function Home() {
         )
         }
         </div>
-        <BottomBar />
+        <BB />
     </>
   )
 }

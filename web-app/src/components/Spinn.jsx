@@ -3,7 +3,9 @@ import { Spinner } from "react-bootstrap"
 
 function Spinn() {
   return (
-    <Spinner animation="grow" variant="dark" />
+    <div id="main_spinner">
+        <Spinner animation="grow" variant="dark" />
+    </div>
   )
 }
 
