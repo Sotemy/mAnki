@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Sotemy/mAnki/issues"
   },
-  "homepage": "https://github.com/Sotemy/mAnki#readme"
+  "homepage": "https://github.com/Sotemy/mAnki#readme",
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  }
 }

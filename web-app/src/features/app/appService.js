@@ -1,6 +1,7 @@
 import axios from "axios"
+import env from "react-dotenv";
 
-const API_URL = '/api/'
+const API_URL = env.REACT_APP_BASE_URL
 
 
 const getData = async (token) => {
@@ -11,7 +12,7 @@ const getData = async (token) => {
         }
     }
 
-    const response = await axios.get(API_URL, config)
+    const response = await axios.get(API_URL+"/", config)
     console.log(response)
 
 

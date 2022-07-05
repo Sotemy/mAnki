@@ -19,6 +19,10 @@ const cardsSchema = mongoose.Schema({
     backText:{
         type: String,
         required: [true, 'Please add back text']
+    },
+    label: {
+        type: String,
+        required: [true, 'Please add tag']
     }
 }, {
     timestamps: true

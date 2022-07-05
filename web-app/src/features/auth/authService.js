@@ -1,10 +1,12 @@
 import axios from "axios"
 
-const API_URL = '/api/auth/'
+import env from "react-dotenv";
+
+const API_URL = env.REACT_APP_BASE_URL
 
 // register user
 const register = async (userData) => {
-    const response = await axios.post(API_URL+'register', userData)
+    const response = await axios.post(API_URL+'/auth/register', userData)
 
 
     if(!response.data){
@@ -16,11 +18,12 @@ const register = async (userData) => {
 
 // register user
 const login = async (userData) => {
-    const response = await axios.post(API_URL+'login', userData)
+    const response = await axios.post(API_URL+'/auth/login', userData)
 
 
     if(!response.data){
         localStorage.setItem('user', JSON.stringify(response.data))
+        
     }
 
     return response

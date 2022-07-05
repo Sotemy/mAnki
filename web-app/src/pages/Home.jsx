@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { ListGroup } from "react-bootstrap"
+import { ListGroup, Container } from "react-bootstrap"
 
 import BB from '../components/BB'
 import { getData } from "../features/app/appSlice"
@@ -44,9 +44,11 @@ function Home() {
         <div>
         {
         app !== undefined ? (
-                  <ListGroup variant="flush">
-                    {app.map(stack=><StackItem item={stack}/>)}
-                  </ListGroup>
+          <Container>
+            <ListGroup variant="flush">
+              {app.map(stack=><StackItem item={stack}/>)}
+            </ListGroup>
+          </Container>
         ) : (
           <div></div>
         )

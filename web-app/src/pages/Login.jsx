@@ -26,11 +26,11 @@ function Login() {
 
     useEffect(() => {
         if(isError){
-            toast.error(message)
+            return toast.error(message)
         }
 
         if(isSuccess || user){
-            navigate('/')
+            return navigate('/')
         }
 
         dispatch(reset())
@@ -99,7 +99,7 @@ function Login() {
                     />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <Form.Check type="checkbox" label="Save me (you are will be logged in for 30 days)" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Submit

@@ -11,7 +11,7 @@ const initialState = {
 
 export const getData = createAsyncThunk('/', async (_, thunkAPI) => {
     try {
-        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYzFjYmI5NGE4NDIzNjZmZTUwODk4MiIsImlhdCI6MTY1NjkzNzAyMCwiZXhwIjoxNjU5NTI5MDIwfQ.FS4ORlLTmALRNPcsxn7aOyDGDerH9J9mpLReJX-puA8"
+        const token = thunkAPI.getState().auth.user.token;
         return await appService.getData(token)
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
