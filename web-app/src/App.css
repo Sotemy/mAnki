@@ -1,0 +1,18 @@
+.home {
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+  }
+
+p.bad_badge {
+    color:crimson;
+}
+
+p.mature_badge {
+    color:lime;
+}
+
+p.new_badge {
+    color:blue;
+}
