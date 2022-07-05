@@ -1,24 +1,16 @@
 import React from 'react'
-import { 
-    LinkContainer
-   } from 'react-router-bootstrap'
-import { Navbar, Container, Nav } from "react-bootstrap"
+import { Navbar, Nav, Container } from "react-bootstrap"
+
 
 function Navigation() {
   return (
     <Navbar bg="dark" variant="dark">
         <Container>
-        <Navbar.Brand href="/">Navbar</Navbar.Brand>
+        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
         <Nav className="me-auto">
-            <LinkContainer to="/browser">
-                <Nav.Link>Browser</Nav.Link>
-            </LinkContainer>
-            
-        </Nav>
-        <Nav>
-            <Nav.Link>
-                user
-            </Nav.Link>
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
         </Nav>
         </Container>
     </Navbar>

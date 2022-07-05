@@ -1,33 +1,29 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom"
-import { ToastContainer } from "react-toastify"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import logo from './logo.svg';
 import './App.css';
-import Navigation from './components/Navigation';
-
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Learn from "./pages/Learn";
+import Browser from "./pages/Browser";
+import Settings from "./pages/Settings";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Stats from "./pages/Stats";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navigation />
-
+      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          {/* <Route path='/profile' element={<Profile />} /> */}
+            <Route path="/" element={<Home />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/browser" element={<Browser />} />
+            <Route path="/stats" element={<Stats />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<NoPage />} />
         </Routes>
-      </Router>
-      <ToastContainer />
-
+      </BrowserRouter>
     </div>
   );
 }
