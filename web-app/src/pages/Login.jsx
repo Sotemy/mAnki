@@ -23,8 +23,6 @@ function Login() {
     }
 
     if(isSuccess || user){
-        let com = (isSuccess || user === true)
-        console.log(com)
         navigate('/')
     }
 

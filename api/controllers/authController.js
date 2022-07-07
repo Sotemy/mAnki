@@ -62,10 +62,9 @@ const registerUser = asyncHandler (async (req, res) => {
             email: user.email,
             token: generateToken(user._id)
         })
-    } else {
-        res.status(400)
-        throw new Error('Invalid user data')
     }
+    res.status(400)
+    throw new Error('Invalid user data')
 })
 
 const resetUser = asyncHandler (async (req,res) => {

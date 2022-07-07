@@ -2,15 +2,45 @@ const express = require("express")
 require('dotenv').config()
 const cors = require("cors")
 
+const swaggerJsDoc = require("swagger-jsdoc")
+const swaggerUI = require("swagger-ui-express")
+
 const connectDB = require("./db/db")
 const errorHandler = require( "./middlewares/errorMiddleware")
 
 const app = express();
 
-// app.use()
+const swaggerOptions = {
+  swaggerDefinition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'API',
+      version: '0.0.1',
+      description: "REST API on express"
+    },
+  },
+  apis: ['index.js'],
+}
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions)
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs))
+
+/** 
+ * @swagger 
+ * /api/auth/login:
+ *   get: 
+ *     description: Get all Employee by Email
+ *     responses:  
+ *       200: 
+ *         description: Success  
+ *   
+ */ 
+
+
 connectDB()
 
-const whitelist = ["http://localhost:3000"]
+const whitelist = ["http://localhost:3000", "http://192.168.56.1:3000"]
 
 const corsOptions = {
   origin: function (origin, callback) {
