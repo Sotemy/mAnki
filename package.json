@@ -4,7 +4,7 @@
   "description": "mAnki - gain more knowlage easily",
   "main": "index.js",
   "scripts": {
-    "test": "/test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Sotemy/mAnki#readme",
   "dependencies": {
     "concurrently": "^7.2.2"
+  },
+  "devDependencies": {
+    "axios": "^0.27.2",
+    "jest": "^28.1.2"
   }
 }
